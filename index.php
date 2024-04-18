@@ -1,5 +1,6 @@
 <?php
 require_once __DIR__ . '/Models/Production.php';
+require_once __DIR__ . '/Models/Genre.php';
 require_once __DIR__ . '/db.php';
 //Le stampo in pagina
 //var_dump($matrix);
@@ -23,7 +24,7 @@ foreach ($products as $key => $product) {
     //var_dump($product);
     // Pusho nel mio array una nuova istanza Production a cui passo come parametri
     // le caratteristiche che mi servono di ogni prodotto
-    array_push($productions, new Production($product['title'], $product['language'], $product['vote']));
+    array_push($productions, new Production($product['title'], $product['language'], $product['vote'], new Genre($product['genre'], $product['description'])));
 }
 
 //Eccolo!
@@ -58,10 +59,13 @@ foreach ($products as $key => $product) {
                 <?php foreach ($productions as $key => $production): ?>
                     <div class="col-4 g-2">
                         <div class="card h-100">
-                            <h5 class="card-header h-50 bg-dark text-white"><?php echo $production->title ?></h5>
+                            <h5 class="card-header bg-dark text-white"><?php echo $production->title ?></h5>
                             <div class="card-body">
-                                <h5 class="card-title">Lingua: <?php echo $production->language ?></h5>
+                                <p class="card-text">Lingua: <?php echo $production->language ?></p>
                                 <p class="card-text">Voto: <?php echo $production->vote ?>
+                                <!--Stampo anche l'istanza genre nell'istanza production-->
+                                <p class="card-text">Genere: <?php echo $production->genre->genre_name ?>
+                                <p class="card-text">Genere: <?php echo $production->genre->description ?>
                                 </p>
                             </div>
                         </div>
