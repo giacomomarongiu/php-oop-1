@@ -2,43 +2,43 @@
     {
         "title": "Inception",
         "language": "English",
-        "vote": 8,
-        "poster": "https://images-na.ssl-images-amazon.com/images/I/71u8kUsL0sL._AC_SL1087_.jpg",
+        "vote": 8.8,
+        "description": "A thief who enters the dreams of others to steal their secrets from their subconscious.",
         "genre": "Action"
     },
     {
         "title": "The Shawshank Redemption",
         "language": "English",
-        "vote": 6,
-        "poster": "https://images-na.ssl-images-amazon.com/images/I/61NkP+jDmPL._AC_SY679_.jpg",
+        "vote": 9.3,
+        "description": "Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.",
         "genre": "Drama"
     },
     {
         "title": "The Godfather",
         "language": "English",
-        "vote": 9,
-        "poster": "https://images-na.ssl-images-amazon.com/images/I/91ltn3BhGRL._AC_SL1500_.jpg",
+        "vote": 9.2,
+        "description": "The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant son.",
         "genre": "Crime"
     },
     {
         "title": "Pulp Fiction",
         "language": "English",
-        "vote": 8,
-        "poster": "https://images-na.ssl-images-amazon.com/images/I/51aP9U4RH1L._AC_SY679_.jpg",
+        "vote": 8.9,
+        "description": "The lives of two mob hitmen, a boxer, a gangster and his wife, and a pair of diner bandits intertwine in four tales of violence and redemption.",
         "genre": "Crime"
     },
     {
         "title": "The Dark Knight",
         "language": "English",
-        "vote": 7,
-        "poster": "https://images-na.ssl-images-amazon.com/images/I/81AJdOIEIhL._AC_SY679_.jpg",
+        "vote": 9.0,
+        "description": "When the menace known as The Joker emerges from his mysterious past, he wreaks havoc and chaos on the people of Gotham. The Dark Knight must accept one of the greatest psychological and physical tests of his ability to fight injustice.",
         "genre": "Action"
     },
     {
         "title": "Forrest Gump",
         "language": "English",
-        "vote": 9,
-        "poster": "https://images-na.ssl-images-amazon.com/images/I/51iA9ZyP8lL._AC_SY679_.jpg",
+        "vote": 8.8,
+        "description": "The presidencies of Kennedy and Johnson, the Vietnam War, the Watergate scandal and other historical events unfold from the perspective of an Alabama man with an IQ of 75, whose only desire is to be reunited with his childhood sweetheart.",
         "genre": "Drama"
     }
 ]
