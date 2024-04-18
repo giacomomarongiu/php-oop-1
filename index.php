@@ -1,15 +1,33 @@
 <?php
 require_once __DIR__ . '/Models/Production.php';
-require_once __DIR__ .'/db.php';
+require_once __DIR__ . '/db.php';
 //Le stampo in pagina
-var_dump($matrix);
-var_dump($amelie);
+//var_dump($matrix);
+//var_dump($amelie);
 
 //Stampo la lingua attraverso il metodo
-var_dump($matrix->getLang());
+//var_dump($matrix->getLang());
 
 //Stampo l'array convertito dal json
-var_dump($products);
+//var_dump($products);
+
+//Il mio scopo è creare un altro array di products di istanze di Production
+//Dichiaro il mio array
+$productions = [];
+//Ci pusho le istanze già create
+array_push($productions, $matrix, $amelie);
+
+//Cilo nel mio array ricavato dal mio json e decodato in db
+foreach ($products as $key => $product) {
+    //Verifico cosa stampo
+    //var_dump($product);
+    // Pusho nel mio array una nuova istanza Production a cui passo come parametri
+    // le caratteristiche che mi servono di ogni prodotto
+    array_push($productions, new Production($product['title'], $product['language'], $product['vote']));
+}
+
+//Eccolo!
+//var_dump($productions);
 ?>
 
 
@@ -28,18 +46,35 @@ var_dump($products);
 
 </head>
 
-<body>
-    <header>
-        <nav class="navbar bg-primary">
-            <div class="container-fluid justify-content-center">
-                <a class="navbar-brand fw-bold" href="#">
-                    Productions <i class="fa-solid fa-video"></i>
-                </a>
-            </div>
-        </nav>
+<body class="bg-secondary ">
+    <header class="">
+        <?php include __DIR__ . '/Layout/nav.php'; ?>
     </header>
 
+    <!--Main-->
+    <main>
+        <div class="container my-2">
+            <div class="row">
+                <?php foreach ($productions as $key => $production): ?>
+                    <div class="col-4 g-2">
+                        <div class="card h-100">
+                            <h5 class="card-header h-50 bg-dark text-white"><?php echo $production->title ?></h5>
+                            <div class="card-body">
+                                <h5 class="card-title">Lingua: <?php echo $production->language ?></h5>
+                                <p class="card-text">Voto: <?php echo $production->vote ?>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                <?php endforeach ?>
+            </div>
+        </div>
+    </main>
 
+    <!--footer-->
+    <footer class="">
+        <?php include __DIR__ . '/Layout/nav.php'; ?>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"

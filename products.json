@@ -1,44 +1,44 @@
 [
     {
-        "title": "New Jersey",
-        "author": "Bon Jovi",
-        "year": 1988,
-        "poster": "https://images-na.ssl-images-amazon.com/images/I/51sBr4IWDwL.jpg",
-        "genre": "Rock"
+        "title": "Inception",
+        "language": "English",
+        "vote": 8,
+        "poster": "https://images-na.ssl-images-amazon.com/images/I/71u8kUsL0sL._AC_SL1087_.jpg",
+        "genre": "Action"
     },
     {
-        "title": "Live at Wembley 86",
-        "author": "Queen",
-        "year": 1992,
-        "poster": "https://images-na.ssl-images-amazon.com/images/I/71g40mlbinL._SX355_.jpg",
-        "genre": "Pop"
+        "title": "The Shawshank Redemption",
+        "language": "English",
+        "vote": 6,
+        "poster": "https://images-na.ssl-images-amazon.com/images/I/61NkP+jDmPL._AC_SY679_.jpg",
+        "genre": "Drama"
     },
     {
-        "title": "Ten\"s Summoner\"s Tales",
-        "author": "Sting",
-        "year": 1993,
-        "poster": "https://images-na.ssl-images-amazon.com/images/I/411BQR6BHRL.jpg",
-        "genre": "Pop"
+        "title": "The Godfather",
+        "language": "English",
+        "vote": 9,
+        "poster": "https://images-na.ssl-images-amazon.com/images/I/91ltn3BhGRL._AC_SL1500_.jpg",
+        "genre": "Crime"
     },
     {
-        "title": "Steve Gadd band",
-        "author": "Steve Gadd Band",
-        "year": 2018,
-        "poster": "https://m.media-amazon.com/images/I/81UtLzBDoEL._SS500_.jpg",
-        "genre": "Jazz"
+        "title": "Pulp Fiction",
+        "language": "English",
+        "vote": 8,
+        "poster": "https://images-na.ssl-images-amazon.com/images/I/51aP9U4RH1L._AC_SY679_.jpg",
+        "genre": "Crime"
     },
     {
-        "title": "Brave new World",
-        "author": "Iron Maiden",
-        "year": 2000,
-        "poster": "https://upload.wikimedia.org/wikipedia/en/0/03/Iron_Maiden_-_Brave_New_World.jpg",
-        "genre": "Metal"
+        "title": "The Dark Knight",
+        "language": "English",
+        "vote": 7,
+        "poster": "https://images-na.ssl-images-amazon.com/images/I/81AJdOIEIhL._AC_SY679_.jpg",
+        "genre": "Action"
     },
     {
-        "title": "One more car, one more rider",
-        "author": "Eric Clapton",
-        "year": 2002,
-        "poster": "https://images-na.ssl-images-amazon.com/images/I/81MDAIdh78L._SY355_.jpg",
-        "genre": "Rock"
+        "title": "Forrest Gump",
+        "language": "English",
+        "vote": 9,
+        "poster": "https://images-na.ssl-images-amazon.com/images/I/51iA9ZyP8lL._AC_SY679_.jpg",
+        "genre": "Drama"
     }
 ]
