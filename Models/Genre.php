@@ -17,4 +17,4 @@ class Genre
 //Dichiaro un istanza
 $default = new Genre("Crime","Questa è una descrizione");
 // La vedo
-var_dump( $default );
+//var_dump( $default );
