@@ -53,7 +53,7 @@ foreach ($products as $key => $product) {
     </header>
 
     <!--Main-->
-    <main>
+    <main> 
         <div class="container my-2">
             <div class="row">
                 <?php foreach ($productions as $key => $production): ?>
@@ -61,11 +61,11 @@ foreach ($products as $key => $product) {
                         <div class="card h-100">
                             <h5 class="card-header bg-dark text-white"><?php echo $production->title ?></h5>
                             <div class="card-body">
-                                <p class="card-text">Lingua: <?php echo $production->language ?></p>
-                                <p class="card-text">Voto: <?php echo $production->vote ?>
+                                <p class="card-text"><span class="fw-bold">Lingua:</span> <?php echo $production->language ?></p>
+                                <p class="card-text"><span class="fw-bold">Voto:</span> <?php echo $production->vote ?>
                                 <!--Stampo anche l'istanza genre nell'istanza production-->
-                                <p class="card-text">Genere: <?php echo $production->genre->genre_name ?>
-                                <p class="card-text">Genere: <?php echo $production->genre->description ?>
+                                <p class="card-text"><span class="fw-bold">Genere:</span> <?php echo $production->genre->genre_name ?>
+                                <p class="card-text"><span class="fw-bold">Descrizone:</span> <?php echo $production->genre->description ?>
                                 </p>
                             </div>
                         </div>

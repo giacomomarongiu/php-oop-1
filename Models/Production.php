@@ -29,5 +29,5 @@ class Production
 }
 
 //Dichiaro due istanze
-$matrix = new Production("Matrix", "Italiano", 7, new Genre("Action", "Descrizione"));
-$amelie = new Production("Il fantastico mondo di Amelie", "Francese", 9, new Genre("Comedy", "Descrizione"));
+$matrix = new Production("Matrix", "Italiano", 7, new Genre("Action", "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, cumque."));
+$amelie = new Production("Il fantastico mondo di Amelie", "Francese", 9, new Genre("Comedy", "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, cumque."));
