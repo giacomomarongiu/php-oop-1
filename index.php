@@ -52,7 +52,7 @@ foreach ($products as $key => $product) {
         //Imposto la proprietà dell'istanza con il "metodo figlio"
         (end($productions))->setProfits($product['money']);
         //Verifico
-        var_dump(end($productions));
+        //var_dump(end($productions));
 
     } elseif ($product['type'] == "Serie") {
         //Costruisco l'istanza con il "metodo genitore"
@@ -116,10 +116,15 @@ foreach ($products as $key => $product) {
                         <div class="card h-100">
                             <h5 class="card-header bg-dark text-white">
                                 <?php echo $production->title;
-                                echo $production->type ?></h5>
-                            <h6 class="card-header bg-dark text-white"><?php
+                                echo $production->type ?>
+                            </h5>
+                            <h6 class="card-header bg-dark text-warning"><?php
                             echo $production->type;
-                            if ($production->type == 'Serie') { echo " " .$production->seasons." ". "Stagioni" ;} else { echo " "."Durata:"." ". $production->duration."'" ; }
+                            if ($production->type == 'Serie') {
+                                echo " " . $production->seasons . " " . "Stagioni";
+                            } else {
+                                echo " " . "Durata:" . " " . $production->duration . "'";
+                            }
                             ?></h6>
                             <div class="card-body">
                                 <p class="card-text"><span class="fw-bold">Lingua:</span>
@@ -128,6 +133,13 @@ foreach ($products as $key => $product) {
                                     <!--Stampo anche l'istanza genre nell'istanza production-->
                                 <p class="card-text"><span class="fw-bold">Genere:</span>
                                     <?php echo $production->genre->genre_name ?>
+                                </p>
+                                <p class="card-text"><span class="fw-bold"><?php if ($production->type == 'Movie') {
+                                    echo "Sapevi che ha incassato " . $production->profits . " milioni?";
+                                }
+                                ; ?>
+</span>
+                                </p>
                                 <p class="card-text"><span class="fw-bold">Descrizone:</span>
                                     <?php echo $production->genre->description ?>
                                 </p>
