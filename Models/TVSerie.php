@@ -12,7 +12,7 @@ class TVSerie extends Production
 }
 
 //Faccio un tentativo
-$defaultTV = new TVSerie("Pippo", "Arabo", 5,"Serie", new Genre("Comedy", "Lorem"));
+//$defaultTV = new TVSerie("Pippo", "Arabo", 5,"Serie", new Genre("Comedy", "Lorem"));
 
 //Stampo
 //var_dump($defaultTV);

@@ -115,8 +115,7 @@ foreach ($products as $key => $product) {
                     <div class="col-4 g-2">
                         <div class="card h-100">
                             <h5 class="card-header bg-dark text-white">
-                                <?php echo $production->title;
-                                echo $production->type ?>
+                                <?php echo $production->title; ?>
                             </h5>
                             <h6 class="card-header bg-dark text-warning"><?php
                             echo $production->type;
@@ -132,13 +131,16 @@ foreach ($products as $key => $product) {
                                 <p class="card-text"><span class="fw-bold">Voto:</span> <?php echo $production->vote ?>
                                     <!--Stampo anche l'istanza genre nell'istanza production-->
                                 <p class="card-text"><span class="fw-bold">Genere:</span>
-                                    <?php echo $production->genre->genre_name ?>
+                                    <?php
+                                    foreach ($production->genre->genres as $key => $gen) {
+                                        echo $gen." ";
+                                    } ?>
                                 </p>
                                 <p class="card-text"><span class="fw-bold"><?php if ($production->type == 'Movie') {
                                     echo "Sapevi che ha incassato " . $production->profits . " milioni?";
                                 }
                                 ; ?>
-</span>
+                                    </span>
                                 </p>
                                 <p class="card-text"><span class="fw-bold">Descrizone:</span>
                                     <?php echo $production->genre->description ?>

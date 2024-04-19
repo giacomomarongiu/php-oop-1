@@ -4,7 +4,9 @@
         "language": "English",
         "vote": 8.8,
         "description": "A thief who enters the dreams of others to steal their secrets from their subconscious.",
-        "genre": "Action",
+        "genre": [
+            "Action"
+        ],
         "type": "Movie",
         "money": 104,
         "duration": 207
@@ -14,7 +16,9 @@
         "language": "English",
         "vote": 9.3,
         "description": "Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.",
-        "genre": "Drama",
+        "genre": [
+            "Drama","Pippo"
+        ],
         "type": "Movie",
         "money": 67,
         "duration": 181
@@ -24,7 +28,9 @@
         "language": "English",
         "vote": 9.2,
         "description": "The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant son.",
-        "genre": "Crime",
+        "genre": [
+            "Crime"
+        ],
         "type": "Movie",
         "money": 121,
         "duration": 267
@@ -34,7 +40,10 @@
         "language": "English",
         "vote": 8.9,
         "description": "The lives of two mob hitmen, a boxer, a gangster and his wife, and a pair of diner bandits intertwine in four tales of violence and redemption.",
-        "genre": "Crime",
+        "genre": [
+            "Crime",
+            "Action"
+        ],
         "type": "Movie",
         "money": 86,
         "duration": 225
@@ -44,7 +53,9 @@
         "language": "English",
         "vote": 9.0,
         "description": "When the menace known as The Joker emerges from his mysterious past, he wreaks havoc and chaos on the people of Gotham. The Dark Knight must accept one of the greatest psychological and physical tests of his ability to fight injustice.",
-        "genre": "Action",
+        "genre": [
+            "Action"
+        ],
         "type": "Movie",
         "money": 113,
         "duration": 156
@@ -54,7 +65,9 @@
         "language": "English",
         "vote": 8.8,
         "description": "The presidencies of Kennedy and Johnson, the Vietnam War, the Watergate scandal and other historical events unfold from the perspective of an Alabama man with an IQ of 75, whose only desire is to be reunited with his childhood sweetheart.",
-        "genre": "Drama",
+        "genre": [
+            "Drama"
+        ],
         "type": "Movie",
         "money": 92,
         "duration": 243
@@ -64,7 +77,10 @@
         "language": "English",
         "vote": 8.7,
         "description": "When a young boy disappears, his mother, a police chief and his friends must confront terrifying supernatural forces in order to get him back.",
-        "genre": "Drama",
+        "genre": [
+            "Drama",
+            "Action"
+        ],
         "type": "Serie",
         "season": 6
     },
@@ -73,7 +89,9 @@
         "language": "English",
         "vote": 9.5,
         "description": "A high school chemistry teacher diagnosed with inoperable lung cancer turns to manufacturing and selling methamphetamine in order to secure his family's future.",
-        "genre": "Crime",
+        "genre": [
+            "Crime"
+        ],
         "type": "Serie",
         "season": 5
     },
@@ -82,7 +100,9 @@
         "language": "English",
         "vote": 9.3,
         "description": "Nine noble families fight for control over the lands of Westeros, while an ancient enemy returns after being dormant for millennia.",
-        "genre": "Action",
+        "genre": [
+            "Action"
+        ],
         "type": "Serie",
         "season": 8
     },
@@ -91,7 +111,10 @@
         "language": "English",
         "vote": 8.9,
         "description": "Follows the personal and professional lives of six twenty to thirty-something-year-old friends living in Manhattan.",
-        "genre": "Comedy",
+        "genre": [
+            "Comedy",
+            "Action"
+        ],
         "type": "Serie",
         "season": 10
     }

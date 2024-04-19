@@ -17,7 +17,7 @@ class Movie extends Production
 }
 
 //Faccio un tentativo
-$defaultMovie = new Movie("Pippo", "Arabo", 5,"Movie", new Genre("Comedy", "Lorem"));
+//$defaultMovie = new Movie("Pippo", "Arabo", 5,"Movie", new Genre("Comedy", "Lorem"));
 
 //Stampo
 //var_dump($defaultMovie);
