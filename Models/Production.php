@@ -9,14 +9,16 @@ class Production
     public $language;
     public $vote;
     public $genre;
+    public $type;
 
     //Metodo construct + che chiede in input un istanze genre!
-    public function __construct($title, $language, int $vote, Genre $genre)
+    public function __construct($title, $language, int $vote, $type, Genre $genre)
     {
 
         $this->title = $title;
         $this->language = $language;
         $this->vote = $vote;
+        $this->type = $type;
         $this->genre = $genre;
 
     }
@@ -29,5 +31,5 @@ class Production
 }
 
 //Dichiaro due istanze
-$matrix = new Production("Matrix", "Italiano", 7, new Genre("Action", "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, cumque."));
-$amelie = new Production("Il fantastico mondo di Amelie", "Francese", 9, new Genre("Comedy", "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, cumque."));
+//$matrix = new Production("Matrix", "Italiano", 7, "Movie", new Genre("Action", "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, cumque."));
+//$amelie = new Production("Il fantastico mondo di Amelie", "Francese", 9, "Movie", new Genre("Comedy", "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, cumque."));

@@ -1,6 +1,8 @@
 <?php
 require_once __DIR__ . '/Models/Production.php';
 require_once __DIR__ . '/Models/Genre.php';
+require_once __DIR__ . '/Models/Movie.php';
+require_once __DIR__ . '/Models/TVSerie.php';
 require_once __DIR__ . '/db.php';
 //Le stampo in pagina
 //var_dump($matrix);
@@ -16,7 +18,7 @@ require_once __DIR__ . '/db.php';
 //Dichiaro il mio array
 $productions = [];
 //Ci pusho le istanze già create
-array_push($productions, $matrix, $amelie);
+//array_push($productions, $matrix, $amelie);
 
 //Cilo nel mio array ricavato dal mio json e decodato in db
 foreach ($products as $key => $product) {
@@ -24,7 +26,60 @@ foreach ($products as $key => $product) {
     //var_dump($product);
     // Pusho nel mio array una nuova istanza Production a cui passo come parametri
     // le caratteristiche che mi servono di ogni prodotto
-    array_push($productions, new Production($product['title'], $product['language'], $product['vote'], new Genre($product['genre'], $product['description'])));
+
+    // Devo gestire la situazione in cui il prodotto è serie TV o Film
+    if ($product['type'] == "Movie") {
+        //Costruisco l'istanza con il "metodo genitore"
+        array_push(
+            $productions,
+            new Movie(
+                $product['title'],
+                $product['language'],
+                $product['vote'],
+                $product['type'],
+                new Genre(
+                    $product['genre'],
+                    $product['description']
+                )
+            )
+        );
+        //Essendo "Movie" l'istanza ha anche le proprietà "duration" e "profits"
+        //Quindi prendo l'ultimo elemento aggiunto con end
+        //Verifico
+        //var_dump(end($productions));
+        //Imposto la proprietà dell'istanza con il "metodo figlio"
+        (end($productions))->setDuration($product['duration']);
+        //Imposto la proprietà dell'istanza con il "metodo figlio"
+        (end($productions))->setProfits($product['money']);
+        //Verifico
+        var_dump(end($productions));
+
+    } elseif ($product['type'] == "Serie") {
+        //Costruisco l'istanza con il "metodo genitore"
+        array_push(
+            $productions,
+            new TVSerie(
+                $product['title'],
+                $product['language'],
+                $product['vote'],
+                $product['type'],
+                new Genre(
+                    $product['genre'],
+                    $product['description']
+                )
+            )
+        );
+        //Essendo "Serie" l'istanza ha anche la proprietà "seasons"
+        //Quindi prendo l'ultimo elemento aggiunto con end
+        //Verifico
+        //var_dump(end($productions));
+        //Imposto la proprietà dell'istanza con il "metodo figlio"
+        (end($productions))->setSeasons($product['season']);
+        //Verifico
+        //var_dump(end($productions));
+
+
+    }
 }
 
 //Eccolo!
@@ -53,19 +108,28 @@ foreach ($products as $key => $product) {
     </header>
 
     <!--Main-->
-    <main> 
+    <main>
         <div class="container my-2">
             <div class="row">
                 <?php foreach ($productions as $key => $production): ?>
                     <div class="col-4 g-2">
                         <div class="card h-100">
-                            <h5 class="card-header bg-dark text-white"><?php echo $production->title ?></h5>
+                            <h5 class="card-header bg-dark text-white">
+                                <?php echo $production->title;
+                                echo $production->type ?></h5>
+                            <h6 class="card-header bg-dark text-white"><?php
+                            echo $production->type;
+                            if ($production->type == 'Serie') { echo " " .$production->seasons." ". "Stagioni" ;} else { echo " "."Durata:"." ". $production->duration."'" ; }
+                            ?></h6>
                             <div class="card-body">
-                                <p class="card-text"><span class="fw-bold">Lingua:</span> <?php echo $production->language ?></p>
+                                <p class="card-text"><span class="fw-bold">Lingua:</span>
+                                    <?php echo $production->language ?></p>
                                 <p class="card-text"><span class="fw-bold">Voto:</span> <?php echo $production->vote ?>
-                                <!--Stampo anche l'istanza genre nell'istanza production-->
-                                <p class="card-text"><span class="fw-bold">Genere:</span> <?php echo $production->genre->genre_name ?>
-                                <p class="card-text"><span class="fw-bold">Descrizone:</span> <?php echo $production->genre->description ?>
+                                    <!--Stampo anche l'istanza genre nell'istanza production-->
+                                <p class="card-text"><span class="fw-bold">Genere:</span>
+                                    <?php echo $production->genre->genre_name ?>
+                                <p class="card-text"><span class="fw-bold">Descrizone:</span>
+                                    <?php echo $production->genre->description ?>
                                 </p>
                             </div>
                         </div>

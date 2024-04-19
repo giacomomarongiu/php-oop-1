@@ -8,17 +8,16 @@ class Movie extends Production
     public $profits = "test";
     public $duration = "Altro test";
 
-/*     public function __construct($title, $language, int $vote, Genre $genre, $profits, $duration)
-    {
-        $this->title = $title;
-        $this->language = $language;
-        $this->vote = $vote;
-        $this->genre = $genre;
-    } */
+    public function setProfits($profits){
+        $this->profits = $profits;
+    }
+    public function setDuration($duration){
+        $this->duration = $duration;
+    }
 }
 
 //Faccio un tentativo
-$defaultMovie = new Movie("Pippo", "Arabo", 5, new Genre("Comedy", "Lorem"));
+$defaultMovie = new Movie("Pippo", "Arabo", 5,"Movie", new Genre("Comedy", "Lorem"));
 
 //Stampo
-var_dump($defaultMovie);
+//var_dump($defaultMovie);
